@@ -14,6 +14,7 @@ function extractImageUid(ref) {
     return uidParts[4] + "_" + uidParts[2] + "_" + uidParts[1];
 }
 
+// Convert a URL into a local path to compartmentalize the media.
 function idEmbeddedUrlToRelativePath(url) {
     var imageId = extractImageUid(url),
         extension = path.extname(url),
@@ -29,7 +30,8 @@ var mediaSvrOptions = {
     "urlToRelativePath" :  idEmbeddedUrlToRelativePath,
     "mediaHost" :  "www.autoaz.com",
     "cluster" : true,
-    "redis_cache" : false
+    "redis_cache" : false,
+    "rootDirectory" : "./media"
 };
 
 

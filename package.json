@@ -1,0 +1,31 @@
+{
+    "name":"media-server",
+    "version":"0.1.0",
+    "description":"Image server",
+    "keywords":["image","media","resize","thumbnails","server"],
+    "repository":"git://github.com/knowlecules/media-server.git",
+    "author":"Jason Rudland <knowlecules@gmail.com>",
+
+    "dependencies": {
+        "lactate":">= 0.13",
+        "mkdirp":">= 0",
+        "rapid-rest":">= 0",
+        "gm":">= 1.8"
+    },
+
+    "devDependencies": {
+        "jasmine-node": ">=1.0"
+    },
+
+    "main": "index.js",
+    "bin": {
+        "imageServer": "bin/mediaServer"
+    },
+    "scripts": {
+        "test" : "make test"
+    },
+
+    "engines": {
+       "node": ">= 0.8.0"
+    }
+}
